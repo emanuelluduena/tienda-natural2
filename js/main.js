@@ -58,21 +58,21 @@ const productos = [
   },
   {
     nombre: "Maní con Sal x 1 kg",
-    precio: 0,
+    precio: 4000,
     descripcion: "Proteínas · Energía · Grasas saludables · Saciedad",
     imagen: "img/mani-con-sal.jpg",
     categoria: "frutos-secos"
   },
   {
     nombre: "Maní sin Sal x 1 kg",
-    precio: 0,
+    precio: 4000,
     descripcion: "Proteínas · Energía · Grasas saludables · Natural",
     imagen: "img/mani-sin-sal.jpg",
     categoria: "frutos-secos"
   },
   {
     nombre: "Mix Nevado x 1 kg",
-    precio: 0,
+    precio: 15000,
     descripcion: "Energía · Vitaminas · Antioxidantes · Natural",
     imagen: "img/mix-nevado.jpg",
     categoria: "frutos-secos",
@@ -80,7 +80,7 @@ const productos = [
   },
   {
     nombre: "Mix Clásico x 1 kg",
-    precio: 0,
+    precio: 13000,
     descripcion: "Energía · Proteínas · Fibra · Natural",
     imagen: "img/mix-clasico.jpg",
     categoria: "frutos-secos",
@@ -88,7 +88,7 @@ const productos = [
   },
   {
     nombre: "Mix sin Pasas x 1 kg",
-    precio: 0,
+    precio: 16000,
     descripcion: "Energía · Proteínas · Grasas saludables · Natural",
     imagen: "img/mix-sin-pasas.jpg",
     categoria: "frutos-secos",
@@ -96,7 +96,7 @@ const productos = [
   },
   {
     nombre: "Mix sin Maní x 1 kg",
-    precio: 0,
+    precio: 16000,
     descripcion: "Energía · Antioxidantes · Vitaminas · Natural",
     imagen: "img/mix-sin-mani.jpg",
     categoria: "frutos-secos",
@@ -104,7 +104,7 @@ const productos = [
   },
   {
     nombre: "Mix Tropical x 1 kg",
-    precio: 0,
+    precio: 15000,
     descripcion: "Energía · Vitaminas · Fibra · Natural",
     imagen: "img/mix-tropical.jpg",
     categoria: "frutos-secos",
