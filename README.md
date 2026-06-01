@@ -1,0 +1,9 @@
+Esta es una página web que desarrollé para una dietética dedicada a la venta de productos saludables y naturales. La idea surgió porque el local no tenía presencia online y sus clientes solo podían comprar yendo físicamente hasta ahí, así que quise crear un sitio que mostrara los productos y permitiera hacer todo el proceso de compra a distancia.
+La página funciona de manera simple: el cliente recorre el catálogo de productos, va armando su pedido y el sistema calcula automáticamente el total de la compra. Cuando termina, se abre WhatsApp con el pedido completo y el total ya escritos en el mensaje, listos para enviar al local. A partir de ahí, el cliente y la dietética coordinan directamente por ese chat la entrega y el pago.
+Para resolver el cierre de la compra elegí usar WhatsApp en lugar de integrar una pasarela de pago, porque es el canal que el local ya usa habitualmente con sus clientes. Eso hace que la experiencia sea más cercana y directa, y evita la complejidad de manejar pagos online. Durante todo el desarrollo prioricé que el flujo de compra fuera claro y sencillo, para que cualquier persona pudiera hacer su pedido sin complicaciones.
+La página está hecha con HTML para la estructura, CSS para el diseño y los estilos, y JavaScript para toda la lógica del carrito y el armado del pedido. La conexión con WhatsApp la resolví mediante WhatsApp Click to Chat (los enlaces wa.me), generando el mensaje con el pedido completo de forma automática.
+Trabajando en este proyecto puse en práctica el desarrollo web front-end con los tres lenguajes, el manejo del DOM y la lógica de un carrito de compras con JavaScript, la integración de un servicio externo dentro de una aplicación web, y el diseño de un flujo de compra completo pensado para un negocio real.
+El proyecto se encuentra aun en desarrolo.
+
+Link:
+https://emanuelluduena.github.io/tienda-natural2/
