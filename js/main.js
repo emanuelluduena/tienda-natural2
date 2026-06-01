@@ -1017,3 +1017,36 @@ function buscarProductos(texto) {
 
   resultadosDiv.style.display = "block";
 }
+
+function abrirVideo(url) {
+  const overlay = document.createElement("div");
+  overlay.style.cssText = `
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+  `;
+
+  overlay.innerHTML = `
+    <div style="position:relative; width:90%; max-width:560px;">
+      <button onclick="this.closest('div').parentElement.remove()"
+        style="position:absolute; top:-40px; right:0; background:#fff; border:none; border-radius:50%; width:32px; height:32px; font-size:1.2rem; cursor:pointer;">✕</button>
+      <div style="position:relative; padding-bottom:56.25%; height:0;">
+        <iframe src="${url}?autoplay=1"
+          style="position:absolute; top:0; left:0; width:100%; height:100%; border:0; border-radius:8px;"
+          allow="autoplay; encrypted-media"
+          allowfullscreen></iframe>
+      </div>
+    </div>
+  `;
+
+  overlay.onclick = function(e) {
+    if (e.target === overlay) overlay.remove();
+  };
+
+  document.body.appendChild(overlay);
+}
