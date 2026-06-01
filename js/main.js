@@ -232,7 +232,7 @@ const productos = [
   },
   {
     nombre: "Azúcar Mascabo x 500 g",
-    precio: ,
+    precio: 1700,
     descripcion: "Natural · Sin refinar · Hierro · Bajo procesamiento",
     imagen: "img/azucar-mascabo.jpg",
     categoria: "reposteria"
