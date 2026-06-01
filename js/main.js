@@ -29,29 +29,29 @@ const productos = [
 
   // ===== FRUTOS SECOS =====
   {
-    nombre: "Castañas x 1 kg",
-    precio: 1,
+    nombre: "Castañas de Cajú x 1 kg",
+    precio: 25000,
     descripcion: "Energía · Grasas saludables · Proteínas · Antioxidantes",
     imagen: "img/castanas.jpg",
     categoria: "frutos-secos"
   },
   {
     nombre: "Almendras x 1 kg",
-    precio: 0,
+    precio: 30000,
     descripcion: "Vitamina E · Calcio · Proteínas · Grasas saludables",
     imagen: "img/almendras.jpg",
     categoria: "frutos-secos"
   },
   {
     nombre: "Nueces x 1 kg",
-    precio: 0,
+    precio: 23000,
     descripcion: "Omega 3 · Antioxidantes · Proteínas · Energía",
     imagen: "img/nueces.jpg",
     categoria: "frutos-secos"
   },
   {
-    nombre: "Pistachos x 1 kg",
-    precio: 0,
+    nombre: "Pistachos x 500 g",
+    precio: 25000,
     descripcion: "Proteínas · Hierro · Grasas buenas · Antioxidantes",
     imagen: "img/pistachos.jpg",
     categoria: "frutos-secos"
