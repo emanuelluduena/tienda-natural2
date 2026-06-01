@@ -76,7 +76,7 @@ const productos = [
     descripcion: "Energía · Vitaminas · Antioxidantes · Natural",
     imagen: "img/mix-nevado.jpg",
     categoria: "frutos-secos",
-    contenido: "Nueces · Almendras · Castañas · Maní · Arándanos · Semillas de girasol · Coco en escamas"
+    contenido: "Nueces · Almendras · Castañas · Maní · Arándanos · Semillas de girasol · Coco en escamas",
     video: "https://www.youtube.com/embed/0-cn79bhIpw"
   },
   {
