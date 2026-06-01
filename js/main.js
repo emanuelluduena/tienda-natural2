@@ -792,6 +792,7 @@ if (typeof categoriaActual !== "undefined") {
             <p class="precio">$${producto.precio}</p>
             <p>${producto.descripcion}</p>
             ${producto.contenido ? `<p style="font-size:0.78rem;color:#888;margin-top:-8px;"><strong>Contiene:</strong> ${producto.contenido}</p>` : ""}
+            ${producto.video ? `<button class="btn-video" onclick="abrirVideo('${producto.video}')" style="background:#e63946;color:#fff;border:none;border-radius:20px;padding:6px 14px;margin-bottom:8px;cursor:pointer;font-size:0.85rem;">▶ Ver video</button>` : ""}
             <button class="btn-producto"
               data-nombre="${producto.nombre}"
               data-precio="${producto.precio}"
@@ -1004,6 +1005,7 @@ function buscarProductos(texto) {
           <p class="precio">$${producto.precio}</p>
           <p>${producto.descripcion}</p>
           ${producto.contenido ? `<p style="font-size:0.78rem;color:#888;"><strong>Contiene:</strong> ${producto.contenido}</p>` : ""}
+          ${producto.video ? `<button class="btn-video" onclick="abrirVideo('${producto.video}')" style="background:#e63946;color:#fff;border:none;border-radius:20px;padding:6px 14px;margin-bottom:8px;cursor:pointer;font-size:0.85rem;">▶ Ver video</button>` : ""}
           <button class="btn-producto"
             data-nombre="${producto.nombre}"
             data-precio="${producto.precio}"
