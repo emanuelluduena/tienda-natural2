@@ -296,7 +296,7 @@ const productos = [
     categoria: "harinas"
   },
   {
-    nombre: "Harina de Centeno x 1 kg",
+    nombre: "Harina de Centeno x 500 g",
     precio: 3000,
     descripcion: "Fibra · Hierro · Digestión · Energía sostenida",
     imagen: "img/harina-centeno.jpg",
@@ -318,15 +318,15 @@ const productos = [
     destacado: true
   },
   {
-    nombre: "Harina de Algarroba x 1 kg",
-    precio: 0,
+    nombre: "Harina de Algarroba Artesanal x 500 g",
+    precio: 6500,
     descripcion: "Sin TACC · Antioxidantes · Fibra · Bajo índice glucémico",
     imagen: "img/harina-algarroba.jpg",
     categoria: "harinas"
   },
   {
-    nombre: "Harina de Pistacho x 1 kg",
-    precio: 0,
+    nombre: "Harina a base de Pistacho x 500 g",
+    precio: 13000,
     descripcion: "Sin TACC · Proteínas · Grasas buenas · Apta repostería",
     imagen: "img/harina-pistacho.jpg",
     categoria: "harinas",
@@ -334,56 +334,56 @@ const productos = [
   },
   {
     nombre: "Harina de Arroz x 1 kg",
-    precio: 0,
+    precio: 2000,
     descripcion: "Sin TACC · Digestiva · Liviana · Apta repostería",
     imagen: "img/harina-arroz.jpg",
     categoria: "harinas"
   },
   {
     nombre: "Harina de Avena x 1 kg",
-    precio: 0,
+    precio: 3000,
     descripcion: "Fibra · Proteínas · Energía · Saciedad",
     imagen: "img/harina-avena.jpg",
     categoria: "harinas"
   },
   {
     nombre: "Harina de Trigo Sarraceno x 1 kg",
-    precio: 0,
+    precio: 7800,
     descripcion: "Sin TACC · Proteínas · Hierro · Antioxidantes",
     imagen: "img/harina-trigo-sarraceno.jpg",
     categoria: "harinas"
   },
   {
     nombre: "Harina de Maíz Abatí x 1 kg",
-    precio: 0,
+    precio: 2300,
     descripcion: "Sin TACC · Energía · Fibra · Natural",
     imagen: "img/harina-maiz-abati.jpg",
     categoria: "harinas"
   },
   {
     nombre: "Harina de Garbanzo x 1 kg",
-    precio: 0,
+    precio: 2300,
     descripcion: "Sin TACC · Proteínas · Hierro · Fibra",
     imagen: "img/harina-garbanzo.jpg",
     categoria: "harinas"
   },
   {
     nombre: "Avena Instantánea x 1 kg",
-    precio: 0,
+    precio: 2700,
     descripcion: "Fibra · Energía sostenida · Saciedad · Bajo índice glucémico",
     imagen: "img/avena-instantanea-1kg.jpg",
     categoria: "harinas"
   },
   {
     nombre: "Avena Tradicional x 1 kg",
-    precio: 0,
+    precio: 2700,
     descripcion: "Fibra · Energía · Saciedad · Natural",
     imagen: "img/avena-tradicional.jpg",
     categoria: "harinas"
   },
   {
     nombre: "Avena Gruesa x 1 kg",
-    precio: 0,
+    precio: 2700,
     descripcion: "Fibra · Energía sostenida · Digestión · Natural",
     imagen: "img/avena-gruesa.jpg",
     categoria: "harinas"
@@ -391,50 +391,50 @@ const productos = [
 
   // ===== GRANOLAS =====
   {
-    nombre: "Granola con Miel y Pasas x 1 kg",
-    precio: 0,
+    nombre: "Granola Clásica con Miel y Pasas x 1 kg",
+    precio: 8000,
     descripcion: "Energía · Fibra · Antioxidantes · Sin conservantes",
     imagen: "img/granola-miel-pasas.jpg",
     categoria: "granolas"
   },
   {
-    nombre: "Granola con Miel sin Pasas x 1 kg",
-    precio: 0,
+    nombre: "Granola Clásica con Miel sin Pasas x 1 kg",
+    precio: 8000,
     descripcion: "Energía · Fibra · Natural · Sin conservantes",
     imagen: "img/granola-miel-sin-pasas.jpg",
     categoria: "granolas"
   },
   {
     nombre: "Granola con Pasas Sátvica x 1 kg",
-    precio: 0,
+    precio: 8500,
     descripcion: "Natural · Energía · Fibra · Ingredientes seleccionados",
     imagen: "img/granola-pasas-satvica.jpg",
     categoria: "granolas"
   },
   {
     nombre: "Granola con Pasta de Maní Sátvica x 1 kg",
-    precio: 0,
+    precio: 8500,
     descripcion: "Proteínas · Energía · Fibra · Sin conservantes",
     imagen: "img/granola-pasta-mani-satvica.jpg",
     categoria: "granolas"
   },
   {
     nombre: "Granola Tutti Grani Premium x 1 kg",
-    precio: 0,
+    precio: 10000,
     descripcion: "Energía · Fibra · Ingredientes premium · Sin conservantes",
     imagen: "img/granola-tutti-grani-premium.jpg",
     categoria: "granolas"
   },
   {
     nombre: "Granola Tutti Grani Proteica x 1 kg",
-    precio: 0,
+    precio: 10000,
     descripcion: "Proteínas · Energía · Fibra · Rendimiento",
     imagen: "img/granola-tutti-grani-proteica.jpg",
     categoria: "granolas"
   },
   {
     nombre: "Granola Tutti Grani Cacao y Coco x 1 kg",
-    precio: 0,
+    precio: 10000,
     descripcion: "Antioxidantes · Energía · Fibra · Sin conservantes",
     imagen: "img/granola-tutti-grani-cacao-coco.jpg",
     categoria: "granolas"
@@ -443,28 +443,28 @@ const productos = [
   // ===== SUPLEMENTOS =====
   {
     nombre: "Vitamina C en Polvo (Ácido Ascórbico) x 300 g",
-    precio: 0,
+    precio: 8400,
     descripcion: "Inmunidad · Antioxidante · Colágeno · Absorción de hierro",
     imagen: "img/vitamina-c.jpg",
     categoria: "suplementos"
   },
   {
-    nombre: "Cloruro de Magnesio x 300 g",
-    precio: 0,
+    nombre: "Cloruro de Magnesio blister x 10 unid de 33g cada uno",
+    precio: 5000,
     descripcion: "Músculos · Sistema nervioso · Energía · Huesos",
     imagen: "img/cloruro-magnesio.jpg",
     categoria: "suplementos"
   },
   {
-    nombre: "Citrato de Calcio x 300 g",
-    precio: 0,
+    nombre: "Citrato de Calcio x 200 g",
+    precio: 5600,
     descripcion: "Huesos · Dientes · Alta absorción · Sin lactosa",
     imagen: "img/citrato-calcio.jpg",
     categoria: "suplementos"
   },
   {
     nombre: "Creatina Monohidrato x 300 g",
-    precio: 0,
+    precio: 15000,
     descripcion: "Fuerza · Rendimiento · Masa muscular · Recuperación",
     imagen: "img/creatina-300.jpg",
     categoria: "suplementos",
@@ -472,35 +472,35 @@ const productos = [
   },
   {
     nombre: "Colágeno x 300 g",
-    precio: 0,
+    precio: 18000,
     descripcion: "Articulaciones · Piel · Pelo · Uñas · Recuperación",
     imagen: "img/colageno-300.jpg",
     categoria: "suplementos"
   },
   {
     nombre: "Citrato de Magnesio x 300 g",
-    precio: 0,
+    precio: 11000,
     descripcion: "Alta absorción · Músculos · Sueño · Sistema nervioso",
     imagen: "img/citrato-magnesio.jpg",
     categoria: "suplementos"
   },
   {
     nombre: "Citrato de Potasio x 300 g",
-    precio: 0,
+    precio: 11000,
     descripcion: "Presión arterial · Músculos · Hidratación · Corazón",
     imagen: "img/citrato-potasio.jpg",
     categoria: "suplementos"
   },
   {
     nombre: "Maca Micropulverizada x 500 g",
-    precio: 0,
+    precio: 3000,
     descripcion: "Energía · Vitalidad · Hormonal · Resistencia",
     imagen: "img/maca.jpg",
     categoria: "suplementos"
   },
   {
     nombre: "Maca Negra Micropulverizada x 500 g",
-    precio: 0,
+    precio: 3500,
     descripcion: "Energía · Fertilidad · Rendimiento · Antioxidantes",
     imagen: "img/maca-negra.jpg",
     categoria: "suplementos"
@@ -509,15 +509,15 @@ const productos = [
   // ===== OTROS =====
   {
     nombre: "Pasta de Maní x 1 kg",
-    precio: 0,
+    precio: 6000,
     descripcion: "Proteínas · Grasas saludables · Energía · Sin aditivos",
     imagen: "img/pasta-mani.jpg",
     categoria: "otros",
     destacado: true
   },
   {
-    nombre: "Flor de Hibiscus x 300 g",
-    precio: 0,
+    nombre: "Flor de Hibiscus x 350 g",
+    precio: 12500,
     descripcion: "Antioxidantes · Diurética · Vitamina C · Antiinflamatoria",
     imagen: "img/flor-hibiscus.jpg",
     categoria: "otros",
@@ -525,21 +525,21 @@ const productos = [
   },
   {
     nombre: "Manzanilla x 300 g",
-    precio: 0,
+    precio: 16000,
     descripcion: "Digestiva · Relajante · Antiinflamatoria · Natural",
     imagen: "img/manzanilla.jpg",
     categoria: "otros"
   },
   {
     nombre: "Clavo de Olor x 200 g",
-    precio: 0,
+    precio: 12000,
     descripcion: "Antioxidante · Digestivo · Antibacterial · Aromático",
     imagen: "img/clavo-de-olor.jpg",
     categoria: "otros"
   },
   {
     nombre: "Gelatina Sin Sabor x 300 g",
-    precio: 0,
+    precio: 12000,
     descripcion: "Colágeno · Articulaciones · Proteínas · Bajo en calorías",
     imagen: "img/gelatina-sin-sabor.jpg",
     categoria: "otros",
@@ -547,7 +547,7 @@ const productos = [
   },
   {
     nombre: "Avena Instantánea x 2 kg",
-    precio: 0,
+    precio: 5000,
     descripcion: "Fibra · Energía sostenida · Saciedad · Bajo índice glucémico",
     imagen: "img/avena-instantanea-2kg.jpg",
     categoria: "otros",
@@ -556,8 +556,8 @@ const productos = [
 
   // ===== CONGELADOS =====
   {
-    nombre: "Mix de Frutos Rojos Congelados x 1 kg",
-    precio: 22000,
+    nombre: "Mix de Frutos Rojos Congelados x 500 g",
+    precio: 13000,
     descripcion: "Antioxidantes · Vitaminas · Natural",
     imagen: "img/mix-frutos-rojos.jpg",
     categoria: "congelados",
