@@ -554,6 +554,20 @@ const productos = [
     destacado: true
   },
 
+  {
+  nombre: "Aceite de Oliva Extra Virgen 1 Lt",
+  precio: 15000,
+  descripcion: "Primera Prensada · Natural · Sin Aditivos",
+  imagen: "img/aceite-oliva-extra-virgen.jpg",
+  categoria: "aceites",
+  contenido: "Aceite de oliva extra virgen de primera prensada en frío",
+  destacado: true
+},
+
+
+
+
+
   // ===== CONGELADOS =====
   {
     nombre: "Mix de Frutos Rojos Congelados x 500 g",
