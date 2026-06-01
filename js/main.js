@@ -138,21 +138,21 @@ const productos = [
     categoria: "semillas"
   },
   {
-    nombre: "Sésamo Blanco x 500 g",
+    nombre: "Semilla de Sésamo Blanco x 500 g",
     precio: 4500,
     descripcion: "Calcio · Hierro · Grasas buenas · Antioxidantes",
     imagen: "img/sesamo-blanco.jpg",
     categoria: "semillas"
   },
   {
-    nombre: "Sésamo Negro x 500 g",
+    nombre: "Semilla de Sésamo Negro x 500 g",
     precio: 6500,
     descripcion: "Antioxidantes · Calcio · Hierro · Antiinflamatorio",
     imagen: "img/sesamo-negro.jpg",
     categoria: "semillas"
   },
   {
-    nombre: "Sésamo Integral x 500 g",
+    nombre: "Semilla de Sésamo Integral x 500 g",
     precio: 2000,
     descripcion: "Fibra · Calcio · Proteínas · Natural",
     imagen: "img/sesamo-integral.jpg",
@@ -166,7 +166,7 @@ const productos = [
     categoria: "semillas"
   },
   {
-    nombre: "Chía Premium x 500 g",
+    nombre: "Semilla de Chía Premium x 500 g",
     precio: 5000,
     descripcion: "Omega 3 · Proteínas · Fibra · Saciedad",
     imagen: "img/chia-premium.jpg",
@@ -187,7 +187,7 @@ const productos = [
     categoria: "semillas"
   },
   {
-    nombre: "Amaranto x 500 g",
+    nombre: "Semilla de Amaranto x 500 g",
     precio: 5000,
     descripcion: "Proteínas · Sin TACC · Hierro · Calcio",
     imagen: "img/amaranto.jpg",
@@ -201,14 +201,14 @@ const productos = [
     categoria: "semillas"
   },
   {
-    nombre: "Psyllium x 500 g",
+    nombre: "Semilla de Psyllium x 500 g",
     precio: 11000,
     descripcion: "Fibra · Digestión · Saciedad · Sin TACC",
     imagen: "img/psyllium.jpg",
     categoria: "semillas"
   },
   {
-    nombre: "Quinoa Boliviana x 500 g",
+    nombre: "Semilla de Quinoa Boliviana x 500 g",
     precio: 4000,
     descripcion: "Proteínas · Sin TACC · Hierro · Aminoácidos esenciales",
     imagen: "img/quinoa-boliviana.jpg",
