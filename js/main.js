@@ -113,7 +113,7 @@ const productos = [
   },
   {
     nombre: "Mix Premium x 1 kg",
-    precio: 0,
+    precio: 27000,
     descripcion: "Omega 3 · Proteínas · Antioxidantes · Grasas saludables",
     imagen: "img/mix-premium.jpg",
     categoria: "frutos-secos",
@@ -122,7 +122,7 @@ const productos = [
   },
   {
     nombre: "Mix Salado x 1 kg",
-    precio: 0,
+    precio: 10000,
     descripcion: "Energía · Proteínas · Fibra · Saciedad",
     imagen: "img/mix-salado.jpg",
     categoria: "frutos-secos",
@@ -132,84 +132,84 @@ const productos = [
   // ===== SEMILLAS =====
   {
     nombre: "Semillas de Girasol x 500 g",
-    precio: 0,
+    precio: 2250,
     descripcion: "Vitamina E · Grasas saludables · Antioxidantes · Energía",
     imagen: "img/semillas-girasol.jpg",
     categoria: "semillas"
   },
   {
     nombre: "Sésamo Blanco x 500 g",
-    precio: 0,
+    precio: 4500,
     descripcion: "Calcio · Hierro · Grasas buenas · Antioxidantes",
     imagen: "img/sesamo-blanco.jpg",
     categoria: "semillas"
   },
   {
     nombre: "Sésamo Negro x 500 g",
-    precio: 0,
+    precio: 6500,
     descripcion: "Antioxidantes · Calcio · Hierro · Antiinflamatorio",
     imagen: "img/sesamo-negro.jpg",
     categoria: "semillas"
   },
   {
     nombre: "Sésamo Integral x 500 g",
-    precio: 0,
+    precio: 2000,
     descripcion: "Fibra · Calcio · Proteínas · Natural",
     imagen: "img/sesamo-integral.jpg",
     categoria: "semillas"
   },
   {
     nombre: "Semillas de Lino x 500 g",
-    precio: 0,
+    precio: 2100,
     descripcion: "Omega 3 · Fibra · Digestión · Antiinflamatorio",
     imagen: "img/semillas-lino.jpg",
     categoria: "semillas"
   },
   {
     nombre: "Chía Premium x 500 g",
-    precio: 0,
+    precio: 5000,
     descripcion: "Omega 3 · Proteínas · Fibra · Saciedad",
     imagen: "img/chia-premium.jpg",
     categoria: "semillas"
   },
   {
     nombre: "Mix de Semillas x 500 g",
-    precio: 0,
+    precio: 3000,
     descripcion: "Omega 3 · Fibra · Vitaminas · Natural",
     imagen: "img/mix-semillas.jpg",
     categoria: "semillas"
   },
   {
     nombre: "Semillas de Zapallo x 500 g",
-    precio: 0,
+    precio: 12000,
     descripcion: "Zinc · Magnesio · Proteínas · Antioxidantes",
     imagen: "img/semillas-zapallo.jpg",
     categoria: "semillas"
   },
   {
     nombre: "Amaranto x 500 g",
-    precio: 0,
+    precio: 5000,
     descripcion: "Proteínas · Sin TACC · Hierro · Calcio",
     imagen: "img/amaranto.jpg",
     categoria: "semillas"
   },
   {
     nombre: "Semillas de Amapola x 500 g",
-    precio: 0,
+    precio: 11000,
     descripcion: "Calcio · Fibra · Grasas saludables · Antioxidantes",
     imagen: "img/semillas-amapola.jpg",
     categoria: "semillas"
   },
   {
     nombre: "Psyllium x 500 g",
-    precio: 0,
+    precio: 11000,
     descripcion: "Fibra · Digestión · Saciedad · Sin TACC",
     imagen: "img/psyllium.jpg",
     categoria: "semillas"
   },
   {
     nombre: "Quinoa Boliviana x 500 g",
-    precio: 0,
+    precio: 4000,
     descripcion: "Proteínas · Sin TACC · Hierro · Aminoácidos esenciales",
     imagen: "img/quinoa-boliviana.jpg",
     categoria: "semillas"
@@ -217,64 +217,64 @@ const productos = [
 
   // ===== REPOSTERÍA =====
   {
-    nombre: "Fécula de Maíz x 500 g",
-    precio: 0,
+    nombre: "Fécula de Maíz x 1 kg",
+    precio: 4700,
     descripcion: "Sin TACC · Espesante · Liviana · Apta repostería",
     imagen: "img/fecula-maiz.jpg",
     categoria: "reposteria"
   },
   {
-    nombre: "Fécula de Mandioca x 500 g",
-    precio: 0,
+    nombre: "Fécula de Mandioca x 1 kg",
+    precio: 4500,
     descripcion: "Sin TACC · Espesante · Digestiva · Apta repostería",
     imagen: "img/fecula-mandioca.jpg",
     categoria: "reposteria"
   },
   {
     nombre: "Azúcar Mascabo x 500 g",
-    precio: 0,
+    precio: ,
     descripcion: "Natural · Sin refinar · Hierro · Bajo procesamiento",
     imagen: "img/azucar-mascabo.jpg",
     categoria: "reposteria"
   },
   {
     nombre: "Azúcar Impalpable x 500 g",
-    precio: 0,
+    precio: 2900,
     descripcion: "Fina · Apta repostería · Decoración · Rellenos",
     imagen: "img/azucar-impalpable.jpg",
     categoria: "reposteria"
   },
   {
-    nombre: "Polvo para Hornear x 500 g",
-    precio: 0,
+    nombre: "Polvo para Hornear x 250 g",
+    precio: 3200,
     descripcion: "Leudante · Apta repostería · Sin tacc · Esponjado natural",
     imagen: "img/polvo-hornear.jpg",
     categoria: "reposteria"
   },
   {
     nombre: "Coco Rallado x 500 g",
-    precio: 0,
+    precio: 7500,
     descripcion: "Natural · Fibra · Energía · Apta repostería",
     imagen: "img/coco-rallado.jpg",
     categoria: "reposteria"
   },
   {
     nombre: "Leche de Coco en Polvo x 500 g",
-    precio: 0,
+    precio: 18000,
     descripcion: "Sin lactosa · Cremosa · Energía · Apta repostería",
     imagen: "img/leche-coco-polvo.jpg",
     categoria: "reposteria"
   },
   {
     nombre: "Cacao Amargo x 500 g",
-    precio: 0,
+    precio: 10000,
     descripcion: "Antioxidantes · Magnesio · Sin azúcar · Apta repostería",
     imagen: "img/cacao-amargo.jpg",
     categoria: "reposteria"
   },
   {
     nombre: "Azúcar de Coco x 500 g",
-    precio: 0,
+    precio: 8000,
     descripcion: "Bajo índice glucémico · Natural · Sin refinar · Energía",
     imagen: "img/azucar-coco.jpg",
     categoria: "reposteria"
@@ -283,35 +283,35 @@ const productos = [
   // ===== HARINAS =====
   {
     nombre: "Harina de Coco x 1 kg",
-    precio: 0,
+    precio: 8000,
     descripcion: "Sin TACC · Fibra · Bajo índice glucémico · Apta repostería",
     imagen: "img/harina-coco.jpg",
     categoria: "harinas"
   },
   {
     nombre: "Harina de Maní x 1 kg",
-    precio: 0,
+    precio: 4000,
     descripcion: "Proteínas · Sin TACC · Grasas saludables · Apta repostería",
     imagen: "img/harina-mani.jpg",
     categoria: "harinas"
   },
   {
     nombre: "Harina de Centeno x 1 kg",
-    precio: 0,
+    precio: 3000,
     descripcion: "Fibra · Hierro · Digestión · Energía sostenida",
     imagen: "img/harina-centeno.jpg",
     categoria: "harinas"
   },
   {
     nombre: "Harina de Almendras sin Piel x 1 kg",
-    precio: 0,
+    precio: 7000,
     descripcion: "Sin TACC · Proteínas · Grasas buenas · Apta repostería",
     imagen: "img/harina-almendras-sin-piel.jpg",
     categoria: "harinas"
   },
   {
     nombre: "Harina de Almendras con Piel x 1 kg",
-    precio: 0,
+    precio: 5500,
     descripcion: "Sin TACC · Fibra · Proteínas · Apta repostería",
     imagen: "img/harina-almendras-con-piel.jpg",
     categoria: "harinas",
