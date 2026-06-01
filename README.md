@@ -3,6 +3,7 @@ La página funciona de manera simple: el cliente recorre el catálogo de product
 Para resolver el cierre de la compra elegí usar WhatsApp en lugar de integrar una pasarela de pago, porque es el canal que el local ya usa habitualmente con sus clientes. Eso hace que la experiencia sea más cercana y directa, y evita la complejidad de manejar pagos online. Durante todo el desarrollo prioricé que el flujo de compra fuera claro y sencillo, para que cualquier persona pudiera hacer su pedido sin complicaciones.
 La página está hecha con HTML para la estructura, CSS para el diseño y los estilos, y JavaScript para toda la lógica del carrito y el armado del pedido. La conexión con WhatsApp la resolví mediante WhatsApp Click to Chat (los enlaces wa.me), generando el mensaje con el pedido completo de forma automática.
 Trabajando en este proyecto puse en práctica el desarrollo web front-end con los tres lenguajes, el manejo del DOM y la lógica de un carrito de compras con JavaScript, la integración de un servicio externo dentro de una aplicación web, y el diseño de un flujo de compra completo pensado para un negocio real.
+El proyecto se encuentra aun en desarrolo.
 
 Link:
 https://emanuelluduena.github.io/tienda-natural2/
