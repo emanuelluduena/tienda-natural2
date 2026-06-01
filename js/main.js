@@ -77,6 +77,7 @@ const productos = [
     imagen: "img/mix-nevado.jpg",
     categoria: "frutos-secos",
     contenido: "Nueces · Almendras · Castañas · Maní · Arándanos · Semillas de girasol · Coco en escamas"
+    video: "https://www.youtube.com/embed/0-cn79bhIpw"
   },
   {
     nombre: "Mix Clásico x 1 kg",
@@ -652,6 +653,7 @@ function crearCarrusel(idContenedor, listaProductos) {
       <p class="precio">$${producto.precio}</p>
       <p style="font-size:0.85rem;">${producto.descripcion}</p>
       ${producto.contenido ? `<p style="font-size:0.78rem;color:#888;margin-top:-8px;"><strong>Contiene:</strong> ${producto.contenido}</p>` : ""}
+      ${producto.video ? `<button class="btn-video" onclick="abrirVideo('${producto.video}')" style="background:#e63946;color:#fff;border:none;border-radius:20px;padding:6px 14px;margin-bottom:8px;cursor:pointer;font-size:0.85rem;">▶ Ver video</button>` : ""}
       <button class="btn-producto"
         data-nombre="${producto.nombre}"
         data-precio="${producto.precio}"
