@@ -1038,7 +1038,7 @@ function abrirVideo(url) {
       <button onclick="this.closest('div').parentElement.remove()"
         style="position:absolute; top:-40px; right:0; background:#fff; border:none; border-radius:50%; width:32px; height:32px; font-size:1.2rem; cursor:pointer;">✕</button>
       <div style="position:relative; padding-bottom:56.25%; height:0;">
-        <iframe src="${url}?autoplay=1"
+        <iframe src="${url}?autoplay=1&rel=0&modestbranding=1&playsinline=1"
           style="position:absolute; top:0; left:0; width:100%; height:100%; border:0; border-radius:8px;"
           allow="autoplay; encrypted-media"
           allowfullscreen></iframe>
