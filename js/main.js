@@ -638,28 +638,30 @@ function crearCarrusel(idContenedor, listaProductos) {
 
   function crearCard(producto) {
     const card = document.createElement("article");
-    card.className = "producto carrusel-card";
+    card.className = "producto card-foto carrusel-card";
     card.style.cssText = `
       flex-shrink: 0;
       width: ${ANCHO_LATERAL}px;
       opacity: 0.6;
       transform: scale(0.9);
       box-sizing: border-box;
+      background-image: url('${producto.imagen}');
       transition: width 0.5s ease, opacity 0.5s ease, transform 0.5s ease;
     `;
     card.innerHTML = `
-      <img src="${producto.imagen}" alt="${producto.nombre}" style="width:100%;max-width:80px;height:auto;margin-bottom:8px;display:block;margin-left:auto;margin-right:auto;">
-      <h3 style="font-size:0.95rem;">${producto.nombre}</h3>
-      <p class="precio">$${producto.precio}</p>
-      <p style="font-size:0.85rem;">${producto.descripcion}</p>
-      ${producto.contenido ? `<p style="font-size:0.78rem;color:#888;margin-top:-8px;"><strong>Contiene:</strong> ${producto.contenido}</p>` : ""}
-      ${producto.video ? `<button class="btn-video" onclick="abrirVideo('${producto.video}')" style="background:#e63946;color:#fff;border:none;border-radius:20px;padding:6px 14px;margin-bottom:8px;cursor:pointer;font-size:0.85rem;">▶ Ver video</button>` : ""}
-      <button class="btn-producto"
-        data-nombre="${producto.nombre}"
-        data-precio="${producto.precio}"
-        onclick="agregarAlCarrito(this)">
-        Agregar al carrito
-      </button>
+      ${producto.video ? `<button class="btn-video" onclick="abrirVideo('${producto.video}')">▶ Ver video</button>` : ""}
+      <div class="card-contenido">
+        <h3>${producto.nombre}</h3>
+        <p class="precio">$${producto.precio}</p>
+        <p class="card-desc">${producto.descripcion}</p>
+        ${producto.contenido ? `<p class="card-contiene"><strong>Contiene:</strong> ${producto.contenido}</p>` : ""}
+        <button class="btn-producto"
+          data-nombre="${producto.nombre}"
+          data-precio="${producto.precio}"
+          onclick="agregarAlCarrito(this)">
+          Agregar al carrito
+        </button>
+      </div>
     `;
     return card;
   }
@@ -786,19 +788,20 @@ if (typeof categoriaActual !== "undefined") {
       .filter(p => p.categoria === categoriaActual)
       .forEach(producto => {
         contenedorCategoria.innerHTML += `
-          <article class="producto">
-            <img src="${producto.imagen}" alt="${producto.nombre}" style="width:100%;max-width:80px;height:auto;margin-bottom:8px;">
-            <h3>${producto.nombre}</h3>
-            <p class="precio">$${producto.precio}</p>
-            <p>${producto.descripcion}</p>
-            ${producto.contenido ? `<p style="font-size:0.78rem;color:#888;margin-top:-8px;"><strong>Contiene:</strong> ${producto.contenido}</p>` : ""}
-            ${producto.video ? `<button class="btn-video" onclick="abrirVideo('${producto.video}')" style="background:#e63946;color:#fff;border:none;border-radius:20px;padding:6px 14px;margin-bottom:8px;cursor:pointer;font-size:0.85rem;">▶ Ver video</button>` : ""}
-            <button class="btn-producto"
-              data-nombre="${producto.nombre}"
-              data-precio="${producto.precio}"
-              onclick="agregarAlCarrito(this)">
-              Agregar al carrito
-            </button>
+          <article class="producto card-foto" style="background-image:url('${producto.imagen}');">
+            ${producto.video ? `<button class="btn-video" onclick="abrirVideo('${producto.video}')">▶ Ver video</button>` : ""}
+            <div class="card-contenido">
+              <h3>${producto.nombre}</h3>
+              <p class="precio">$${producto.precio}</p>
+              <p class="card-desc">${producto.descripcion}</p>
+              ${producto.contenido ? `<p class="card-contiene"><strong>Contiene:</strong> ${producto.contenido}</p>` : ""}
+              <button class="btn-producto"
+                data-nombre="${producto.nombre}"
+                data-precio="${producto.precio}"
+                onclick="agregarAlCarrito(this)">
+                Agregar al carrito
+              </button>
+            </div>
           </article>
         `;
       });
@@ -999,19 +1002,20 @@ function buscarProductos(texto) {
   } else {
     encontrados.forEach(producto => {
       gridResultados.innerHTML += `
-        <article class="producto">
-          <img src="${producto.imagen}" alt="${producto.nombre}" style="width:100%;max-width:80px;height:auto;margin-bottom:8px;">
-          <h3>${producto.nombre}</h3>
-          <p class="precio">$${producto.precio}</p>
-          <p>${producto.descripcion}</p>
-          ${producto.contenido ? `<p style="font-size:0.78rem;color:#888;"><strong>Contiene:</strong> ${producto.contenido}</p>` : ""}
-          ${producto.video ? `<button class="btn-video" onclick="abrirVideo('${producto.video}')" style="background:#e63946;color:#fff;border:none;border-radius:20px;padding:6px 14px;margin-bottom:8px;cursor:pointer;font-size:0.85rem;">▶ Ver video</button>` : ""}
-          <button class="btn-producto"
-            data-nombre="${producto.nombre}"
-            data-precio="${producto.precio}"
-            onclick="agregarAlCarrito(this)">
-            Agregar al carrito
-          </button>
+        <article class="producto card-foto" style="background-image:url('${producto.imagen}');">
+          ${producto.video ? `<button class="btn-video" onclick="abrirVideo('${producto.video}')">▶ Ver video</button>` : ""}
+          <div class="card-contenido">
+            <h3>${producto.nombre}</h3>
+            <p class="precio">$${producto.precio}</p>
+            <p class="card-desc">${producto.descripcion}</p>
+            ${producto.contenido ? `<p class="card-contiene"><strong>Contiene:</strong> ${producto.contenido}</p>` : ""}
+            <button class="btn-producto"
+              data-nombre="${producto.nombre}"
+              data-precio="${producto.precio}"
+              onclick="agregarAlCarrito(this)">
+              Agregar al carrito
+            </button>
+          </div>
         </article>
       `;
     });
