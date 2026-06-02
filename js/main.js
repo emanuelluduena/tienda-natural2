@@ -827,6 +827,10 @@ function agregarAlCarrito(boton) {
 
   actualizarCarrito();
   guardarCarrito();
+
+  const itemActual = carrito.find(item => item.nombre === nombre);
+  const subtotal = carrito.reduce((acc, item) => acc + item.precio * item.cantidad, 0);
+  mostrarAviso(nombre, itemActual.cantidad, subtotal);
 }
 
 function abrirCarrito() {
@@ -1055,4 +1059,57 @@ function abrirVideo(url) {
   };
 
   document.body.appendChild(overlay);
+}
+function mostrarAviso(nombre, cantidad, subtotal) {
+  let cont = document.getElementById("avisos-carrito");
+  if (!cont) {
+    cont = document.createElement("div");
+    cont.id = "avisos-carrito";
+    cont.style.cssText = `
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 10000;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      max-width: 300px;
+    `;
+    document.body.appendChild(cont);
+  }
+
+  const aviso = document.createElement("div");
+  aviso.style.cssText = `
+    background: #fff;
+    border-left: 5px solid #4a7c1f;
+    border-radius: 8px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.18);
+    padding: 14px 16px;
+    font-size: 0.9rem;
+    color: #333;
+    opacity: 0;
+    transform: translateX(60px);
+    transition: opacity 0.35s ease, transform 0.35s ease;
+  `;
+  aviso.innerHTML = `
+    <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px;">
+      <span style="font-size:1.1rem;">✅</span>
+      <strong style="color:#4a7c1f;">Agregado al carrito</strong>
+    </div>
+    <div style="margin-bottom:4px;">${nombre} <span style="color:#888;">x${cantidad}</span></div>
+    <div style="font-weight:600;">Subtotal: $${subtotal}</div>
+  `;
+
+  cont.appendChild(aviso);
+
+  requestAnimationFrame(() => {
+    aviso.style.opacity = "1";
+    aviso.style.transform = "translateX(0)";
+  });
+
+  setTimeout(() => {
+    aviso.style.opacity = "0";
+    aviso.style.transform = "translateX(60px)";
+    setTimeout(() => aviso.remove(), 400);
+  }, 3000);
 }
