@@ -1197,3 +1197,112 @@ header {
 @media (max-width: 600px) {
   .producto.card-foto { height: 340px; }
 }
+
+/* ===================================== */
+/* CARRITO - ITEMS CON ESTILO            */
+/* ===================================== */
+
+/* Cada producto del carrito: tarjetita con borde suave */
+.carrito-panel .carrito-item {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-areas:
+    "nombre eliminar"
+    "controles precio";
+  gap: 8px 12px;
+  align-items: center;
+  padding: 14px;
+  margin-bottom: 12px;
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+/* El nombre del producto */
+.carrito-panel .carrito-item > span:first-child {
+  grid-area: nombre;
+  font-weight: 600;
+  color: var(--texto-principal);
+  font-size: 0.95rem;
+}
+
+/* El precio (subtotal de ese producto) */
+.carrito-panel .carrito-item > span:nth-of-type(2) {
+  grid-area: precio;
+  text-align: right;
+  font-weight: 700;
+  color: var(--verde-principal);
+  font-size: 1.05rem;
+}
+
+/* Los controles de cantidad (- numero +) */
+.carrito-panel .controles-cantidad {
+  grid-area: controles;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.carrito-panel .controles-cantidad button {
+  width: 28px;
+  height: 28px;
+  border: none;
+  border-radius: 50%;
+  background: var(--verde-suave);
+  color: var(--verde-principal);
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s ease, transform 0.15s ease;
+}
+
+.carrito-panel .controles-cantidad button:hover {
+  background: var(--verde-principal);
+  color: #fff;
+  transform: scale(1.1);
+}
+
+.carrito-panel .controles-cantidad span {
+  min-width: 20px;
+  text-align: center;
+  font-weight: 600;
+}
+
+/* El botón de eliminar (tachito) */
+.carrito-panel .btn-eliminar {
+  grid-area: eliminar;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.1rem;
+  opacity: 0.6;
+  justify-self: end;
+  transition: opacity 0.2s ease, transform 0.15s ease;
+}
+
+.carrito-panel .btn-eliminar:hover {
+  opacity: 1;
+  transform: scale(1.2);
+}
+
+/* Botón de finalizar compra */
+.carrito-panel-footer #btn-finalizar-compra {
+  background: var(--verde-principal);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 14px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.15s ease;
+}
+
+.carrito-panel-footer #btn-finalizar-compra:hover {
+  background: #d98c10;
+  transform: translateY(-2px);
+}
