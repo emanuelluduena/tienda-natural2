@@ -15,7 +15,7 @@ const categorias = [
   { nombre: "Semillas que Suman", url: "semillas.html", icono: "ti-plant-2" },
   { nombre: "El Snack Perfecto", url: "frutos-secos.html", icono: "ti-tools-kitchen-2" },
   { nombre: "La Cocina Empieza Acá", url: "Harinas.html", icono: "ti-building-store" },
-  { nombre: "Dulce Consentido", url: "reposteria.html", icono: "ti-cake" },
+  { nombre: "Dulce Consentido", url: "Reposteria.html", icono: "ti-cake" },
   { nombre: "Recargá", url: "suplementos.html", icono: "ti-bolt" },
   { nombre: "Mañanas que Cargan", url: "granolas.html", icono: "ti-sun" },
   { nombre: "Fresquísimos", url: "congelados.html", icono: "ti-snowflake" },
