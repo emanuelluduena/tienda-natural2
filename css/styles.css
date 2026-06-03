@@ -581,7 +581,7 @@ footer a:hover { text-decoration: underline; }
   .categoria-card span {
     font-size: 10px;
   }
-}
+
 
 /* ===================================== */
 /* TRANSICIONES SUAVES GENERALES */
@@ -1348,4 +1348,53 @@ header {
 .carrito-panel-footer #btn-finalizar-compra:hover {
   background: #d98c10;
   transform: translateY(-2px);
+}
+
+/* ===================================== */
+/* HEADER RESPONSIVE (versión final)     */
+/* ===================================== */
+header {
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  overflow: visible;
+}
+
+.logo-texto { height: 70px; width: auto; }
+
+.logo-redondo {
+  height: 120px;
+  width: auto;
+  border-radius: 50%;
+  position: absolute !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  top: 6px !important;
+  z-index: 10;
+}
+
+header nav {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  align-items: center;
+}
+
+@media (max-width: 900px) {
+  header { justify-content: flex-start; padding: 10px 16px; }
+  .logo-texto { height: 46px; }
+  .logo-redondo { height: 62px !important; top: 8px !important; }
+  header nav {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 12px;
+    width: 100%;
+    justify-content: center;
+    margin-top: 12px;
+    padding-bottom: 4px;
+    -webkit-overflow-scrolling: touch;
+  }
+  header nav a { font-size: 13px; white-space: nowrap; }
 }
