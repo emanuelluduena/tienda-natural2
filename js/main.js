@@ -406,17 +406,17 @@ const productos = [
     categoria: "granolas"
   },
   {
-    nombre: "Granola con Pasas Sátvica x 1 kg",
+    nombre: "Granola con Pasas Sátvika x 1 kg",
     precio: 8500,
     descripcion: "Natural · Energía · Fibra · Ingredientes seleccionados",
-    imagen: "img/granola-pasas-satvica.jpg",
+    imagen: "img/granola-pasas-satvika.jpg",
     categoria: "granolas"
   },
   {
-    nombre: "Granola con Pasta de Maní Sátvica x 1 kg",
+    nombre: "Granola con Pasta de Maní Sátvika x 1 kg",
     precio: 8500,
     descripcion: "Proteínas · Energía · Fibra · Sin conservantes",
-    imagen: "img/granola-pasta-mani-satvica.jpg",
+    imagen: "img/granola-pasta-mani-satvika.jpg",
     categoria: "granolas"
   },
   {
@@ -517,7 +517,7 @@ const productos = [
     destacado: true
   },
   {
-    nombre: "Flor de Hibiscus x 350 g",
+    nombre: "Flor de Jamaica-Hibiscus x 350 g",
     precio: 12500,
     descripcion: "Antioxidantes · Diurética · Vitamina C · Antiinflamatoria",
     imagen: "img/flor-hibiscus.jpg",
@@ -550,7 +550,7 @@ const productos = [
     nombre: "Avena Instantánea x 2 kg",
     precio: 5000,
     descripcion: "Fibra · Energía sostenida · Saciedad · Bajo índice glucémico",
-    imagen: "img/avena-instantanea-2kg.jpg",
+    imagen: "img/avena-instantanea-1kg.jpg",
     categoria: "otros",
     destacado: true
   },
