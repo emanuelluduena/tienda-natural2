@@ -1380,6 +1380,12 @@ header nav {
   flex-direction: row;
   gap: 15px;
   align-items: center;
+  margin-left: auto;
+  align-self: center;
+}
+
+header .logo-texto {
+  align-self: center;
 }
 
 @media (max-width: 900px) {
