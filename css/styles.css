@@ -418,9 +418,54 @@ nav a:hover {
 footer {
   background-color: var(--verde-principal);
   color: white;
-  text-align: center;
-  padding: 20px 0;
   font-size: 0.9rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  padding: 14px 30px;
+  flex-wrap: wrap;
+}
+
+.footer-datos {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 28px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.footer-datos p {
+  margin: 0;
+}
+
+.footer-mapa iframe {
+  display: block;
+  width: 260px;
+  height: 110px;
+  border: 0;
+  border-radius: 10px;
+}
+
+@media (max-width: 600px) {
+  footer {
+    flex-direction: column;
+    gap: 14px;
+    padding: 18px 16px;
+  }
+
+  .footer-datos {
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .footer-mapa iframe {
+    width: 100%;
+    max-width: 320px;
+    height: 160px;
+  }
 }
 
 footer a {
@@ -459,35 +504,32 @@ footer a:hover { text-decoration: underline; }
   transform: scale(1.05);
 }
 
-/* ===================================== */
-/* RESPONSIVE MOBILE                     */
-/* ===================================== */
-@media (max-width: 600px) {
-  .producto { width: 100%; }
-
-  /* HEADER MOBILE */
+/* HEADER MOBILE */
   header {
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
     align-items: center;
+    justify-content: flex-start;
     padding: 10px 16px;
     gap: 8px;
+    position: relative;
   }
 
-  /* Logo transparente — más chico en mobile */
+  /* Logo transparente — a la izquierda, más chico */
   .logo-texto {
-    height: 45px;
+    height: 42px;
   }
 
-  /* Logo redondo — más chico y sin posición absoluta */
+  /* Logo redondo — centrado y más chico */
   .logo-redondo {
-    height: 70px;
-    position: static !important;
-    transform: none !important;
-    left: auto !important;
-    top: auto !important;
+    height: 54px;
+    position: absolute !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    top: 4px !important;
   }
 
-  /* NAV en mobile — fila con scroll horizontal */
+  /* NAV en mobile — fila completa abajo, con scroll horizontal */
   nav {
     flex-wrap: nowrap;
     overflow-x: auto;
@@ -495,6 +537,7 @@ footer a:hover { text-decoration: underline; }
     width: 100%;
     justify-content: center;
     padding-bottom: 4px;
+    margin-top: 14px;
     -webkit-overflow-scrolling: touch;
   }
 

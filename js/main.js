@@ -1,4 +1,31 @@
 /* =====================================
+   HEADER (se inserta en todas las páginas)
+   ===================================== */
+const headerPrincipal = document.getElementById("header-principal");
+
+if (headerPrincipal) {
+  headerPrincipal.innerHTML = `
+    <img class="logo-texto" src="img/logo_transparente.png" alt="Sabores de la Tierra">
+
+    <img class="logo-redondo" src="img/logo-redondo.jpg" alt="Logo Sabores de la Tierra">
+
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="productos.html">Productos</a>
+      <a href="nosotros.html">Nosotros</a>
+      <a href="#" class="nav-carrito" onclick="abrirCarrito(); return false;">
+        <span>Carrito</span>
+        <div class="carrito-icono">
+          <span class="icono">🛒</span>
+          <span class="contador" id="contador-carrito">0</span>
+        </div>
+      </a>
+    </nav>
+  `;
+}
+
+
+/* =====================================
    WHATSAPP
    ===================================== */
 function abrirWhatsApp() {

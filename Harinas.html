@@ -14,34 +14,7 @@
 
 <body>
 
-  <header>
-
-  <img 
-    src="img/logo_transparente.png" 
-    alt="Sabores de la Tierra"
-    style="height: 100px; width: auto;"
-  >
-
-  <img 
-    src="img/logo-redondo.jpg" 
-    alt="Logo Sabores de la Tierra"
-    style="height: 150px; width: auto; border-radius: 50%; position: absolute; left: 50%; transform: translateX(-50%); top: 10px; z-index: 10;"
-  >
-
-  <nav>
-    <a href="index.html">Inicio</a>
-    <a href="productos.html">Productos</a>
-    <a href="nosotros.html">Nosotros</a>
-    <a href="#" class="nav-carrito" onclick="abrirCarrito(); return false;">
-      <span>Carrito</span>
-      <div class="carrito-icono">
-        <span class="icono">🛒</span>
-        <span class="contador" id="contador-carrito">0</span>
-      </div>
-    </a>
-  </nav>
-
-</header>
+  <header id="header-principal"></header>
 
   <main>
 
@@ -59,19 +32,6 @@
       <div class="productos-grid" id="productos-categoria"></div>
     </section>
 
-    <section class="carrito">
-      <h2>🛒 Carrito</h2>
-      Lista de productos agregados
-      <div class="carrito-items">
-        <p class="carrito-vacio">El carrito está vacío</p>
-      </div>
-      <div class="carrito-footer">
-        <strong>Total: $0</strong>
-        <button id="btn-finalizar-compra" class="btn-finalizar">
-          Finalizar Compra
-        </button>
-      </div>
-    </section>
 
   </main>
 
