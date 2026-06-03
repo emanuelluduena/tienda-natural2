@@ -554,14 +554,13 @@ const productos = [
     categoria: "otros",
     destacado: true
   },
-
   {
   nombre: "Aceite de Oliva Extra Virgen 1 Lt",
   precio: 15000,
   descripcion: "Primera Prensada · Natural · Sin Aditivos",
   imagen: "img/aceite-oliva-extra-virgen.jpg",
-  categoria: "aceites",
-  contenido: "Aceite de oliva extra virgen de primera prensada en frío",
+  categoria: "otros",
+  contenido: "img/aceite-oliva-extra-virgen.jpg",
   destacado: true
 },
 
@@ -572,7 +571,7 @@ const productos = [
   // ===== CONGELADOS =====
   {
     nombre: "Mix de Frutos Rojos Congelados x 500 g",
-    precio: 13000,
+    precio: 11000,
     descripcion: "Antioxidantes · Vitaminas · Natural",
     imagen: "img/mix-frutos-rojos.jpg",
     categoria: "congelados",
