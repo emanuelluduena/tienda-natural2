@@ -1408,3 +1408,24 @@ body {
 main {
   flex: 1;
 }
+
+/* ===================================== */
+/* HEADER SIMPLE CON VOLVER (Nosotros)    */
+/* ===================================== */
+.header-volver {
+  display: flex;
+  align-items: center;
+  padding: 14px 20px;
+}
+
+.btn-volver {
+  color: #fff;
+  font-weight: 700;
+  font-size: 1rem;
+  text-decoration: none;
+}
+
+.btn-volver:hover {
+  text-decoration: underline;
+  color: #fff;
+}
