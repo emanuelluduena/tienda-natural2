@@ -519,48 +519,6 @@ footer a:hover { text-decoration: underline; }
 /* RESPONSIVE MOBILE                     */
 /* ===================================== */
 @media (max-width: 600px) {
-  /* HEADER MOBILE */
-  header {
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: flex-start;
-    padding: 10px 16px;
-    gap: 8px;
-    position: relative;
-  }
-
-  /* Logo transparente — a la izquierda, más chico */
-  .logo-texto {
-    height: 42px;
-  }
-
-  /* Logo redondo — centrado y más chico */
-  .logo-redondo {
-    height: 54px;
-    position: absolute !important;
-    left: 50% !important;
-    transform: translateX(-50%) !important;
-    top: 4px !important;
-  }
-
-  /* NAV en mobile — fila completa abajo, con scroll horizontal */
-  nav {
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    gap: 12px;
-    width: 100%;
-    justify-content: center;
-    padding-bottom: 4px;
-    margin-top: 14px;
-    -webkit-overflow-scrolling: touch;
-  }
-
-  nav a {
-    font-size: 13px;
-    white-space: nowrap;
-  }
-
   /* GRID DE PRODUCTOS en mobile */
   .productos-grid {
     grid-template-columns: repeat(4, 1fr);
@@ -1372,8 +1330,9 @@ header {
 /* HEADER RESPONSIVE (versión final)     */
 /* ===================================== */
 header {
+  display: flex;
   flex-direction: row;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   position: relative;
@@ -1381,7 +1340,7 @@ header {
 }
 
 .logo-texto {
-  height: 90px;
+  height: 70px;
   width: auto;
   flex-shrink: 0;
 }
@@ -1400,30 +1359,52 @@ header {
 header nav {
   display: flex;
   flex-direction: row;
-  flex-wrap: nowrap;
   gap: 18px;
   align-items: center;
   margin-left: auto;
-  flex-shrink: 0;
-}
-
-header .logo-texto {
-  align-self: center;
 }
 
 @media (max-width: 900px) {
-  header { justify-content: flex-start; padding: 10px 16px; }
-  .logo-texto { height: 46px; }
-  .logo-redondo { height: 62px !important; top: 8px !important; }
-  header nav {
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    gap: 12px;
-    width: 100%;
+  header {
     justify-content: center;
-    margin-top: 12px;
-    padding-bottom: 4px;
-    -webkit-overflow-scrolling: touch;
+    padding: 10px 16px;
   }
+  .logo-texto {
+    height: 25px;
+    margin-right: auto;
+  }
+  .logo-redondo { height: 60px !important; top: 8px !important; }
+
+  header nav {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 14px;
+  }
+
   header nav a { font-size: 13px; white-space: nowrap; }
+}
+/* ===================================== */
+/* ARREGLO: que nada desborde el ancho    */
+/* ===================================== */
+html, body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  margin: 0;
+}
+
+/* ===================================== */
+/* FOOTER SIEMPRE ABAJO (sticky footer)   */
+/* ===================================== */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
 }

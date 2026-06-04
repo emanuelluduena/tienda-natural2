@@ -1164,3 +1164,32 @@ function mostrarAviso(nombre, cantidad, subtotal) {
     setTimeout(() => aviso.remove(), 400);
   }, 3000);
 }
+
+/* =====================================
+   FOOTER (se inserta en todas las páginas)
+   ===================================== */
+const footerPrincipal = document.getElementById("footer-principal");
+
+if (footerPrincipal) {
+  footerPrincipal.innerHTML = `
+    <div class="footer-datos">
+      <p>📍
+        <a href="https://maps.app.goo.gl/as6M8Drw7A7B4qcY6" target="_blank" class="footer-link">
+          Independencia 1054 - Córdoba
+        </a>
+      </p>
+      <p>📲 WhatsApp:
+        <a href="https://wa.me/5493515426971" target="_blank">Escribinos</a>
+      </p>
+      <p>📸
+        <a href="https://www.instagram.com/saboresdelatierradiet/" target="_blank" class="footer-link">
+          @saboresdelatierradiet
+        </a>
+      </p>
+    </div>
+
+    <div class="footer-mapa">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3404.4995324815764!2d-64.19172682585365!3d-31.42791209680599!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9432a28ecb3d95cd%3A0x199ee3917b3d1e98!2sIndependencia%201054%2C%20X5014IUV%20C%C3%B3rdoba!5e0!3m2!1ses-419!2sar!4v1780504772009!5m2!1ses-419!2sar" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  `;
+}
