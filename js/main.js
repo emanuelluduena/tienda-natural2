@@ -1193,3 +1193,28 @@ if (footerPrincipal) {
     </div>
   `;
 }
+
+/* =====================================
+   BARRA DE ANUNCIOS (se inserta arriba de todo)
+   ===================================== */
+const mensajesBarra = [
+  "🚚 Envío gratis desde $40.000 en Córdoba Capital",
+  "⏱️ Demora de 3 a 5 días hábiles",
+  "📦 Enviamos a todo el país - Consultá tu envío",
+  "📍 Independencia 1054 - Córdoba",
+  "📲 Consultas por WhatsApp: 351 542 6971",
+  "🥗 Consultá con nuestra nutricionista al 3516718415"
+];
+
+const barra = document.createElement("div");
+barra.className = "barra-anuncios";
+
+// se ponen los mensajes DOS veces para que el loop sea continuo
+const contenido = [...mensajesBarra, ...mensajesBarra]
+  .map(m => `<span>${m}</span>`)
+  .join("");
+
+barra.innerHTML = `<div class="barra-anuncios-track">${contenido}</div>`;
+
+// la inserta como primer elemento del body (arriba de todo)
+document.body.insertBefore(barra, document.body.firstChild);
