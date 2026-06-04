@@ -1184,7 +1184,7 @@ header {
   border: none;
   display: flex;
   align-items: flex-end;
-  text-align: left;
+  text-align: center;
 }
 
 .producto.card-foto::before {
