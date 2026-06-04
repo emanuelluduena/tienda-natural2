@@ -46,7 +46,7 @@ const categorias = [
   { nombre: "Recargá", url: "suplementos.html", icono: "ti-bolt" },
   { nombre: "Mañanas que Cargan", url: "granolas.html", icono: "ti-sun" },
   { nombre: "Fresquísimos", url: "congelados.html", icono: "ti-snowflake" },
-  { nombre: "El Cajón Sorpresa", url: "otros.html", icono: "ti-gift" },
+  { nombre: "El Cajón Sorpresa", url: "el-cajon-sorpresa.html", icono: "ti-gift" },
 ];
 
 /* =====================================
@@ -795,11 +795,36 @@ function crearCarrusel(idContenedor, listaProductos) {
     setTimeout(actualizarDots, 520);
   }
 
+  // ===== DESLIZAR CON EL DEDO (swipe) =====
+  let touchInicioX = 0;
+  let touchFinX = 0;
+
+  wrapper.addEventListener("touchstart", (e) => {
+    touchInicioX = e.changedTouches[0].screenX;
+  }, { passive: true });
+
+  wrapper.addEventListener("touchend", (e) => {
+    touchFinX = e.changedTouches[0].screenX;
+    const distancia = touchFinX - touchInicioX;
+    if (distancia < -40) {
+      moverConDots(1);      // deslizó a la izquierda → siguiente
+      reiniciarAutoPlay();  // reinicia los 4 segundos
+    } else if (distancia > 40) {
+      moverConDots(-1);     // deslizó a la derecha → anterior
+      reiniciarAutoPlay();
+    }
+  }, { passive: true });
+
   btnIzq.onclick = () => moverConDots(-1);
   btnDer.onclick = () => moverConDots(1);
 
   actualizarDots();
-  setInterval(() => moverConDots(1), 4000);
+  let autoPlay = setInterval(() => moverConDots(1), 4000);
+
+  function reiniciarAutoPlay() {
+    clearInterval(autoPlay);
+    autoPlay = setInterval(() => moverConDots(1), 4000);
+  }
 
   wrapper.insertAdjacentElement("afterend", dotsContainer);
 }
