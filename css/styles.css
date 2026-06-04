@@ -1355,14 +1355,18 @@ header {
 /* ===================================== */
 header {
   flex-direction: row;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   align-items: center;
   justify-content: space-between;
   position: relative;
   overflow: visible;
 }
 
-.logo-texto { height: 70px; width: auto; }
+.logo-texto {
+  height: 90px;
+  width: auto;
+  flex-shrink: 0;
+}
 
 .logo-redondo {
   height: 120px;
@@ -1378,12 +1382,12 @@ header {
 header nav {
   display: flex;
   flex-direction: row;
-  gap: 15px;
+  flex-wrap: nowrap;
+  gap: 18px;
   align-items: center;
   margin-left: auto;
-  align-self: center;
+  flex-shrink: 0;
 }
-
 header .logo-texto {
   align-self: center;
 }
