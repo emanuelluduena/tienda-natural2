@@ -116,11 +116,14 @@
       <button id="btn-finalizar-compra" class="btn-finalizar">
         Finalizar Compra
       </button>
+      <p style="font-size: 12px; color: #888; margin-top: 8px; text-align: center;">
+        🛒 Al finalizar, te contactamos por WhatsApp para coordinar el pago y la entrega.
+      </p>
     </div>
   </div>
 
   <!-- SECCIÓN NUTRICIONISTA -->
-  <section id="nutricionista" style="padding: 60px 20px; background: #f9fdf5; font-family: inherit;">
+  <section id="nutricionista" style="padding: 60px 20px; background: #f9fdf5;">
     <div style="max-width: 700px; margin: 0 auto; text-align: center;">
 
       <p style="display: inline-block; background: #d4edba; color: #3B6D11; font-size: 13px; font-weight: 600; padding: 5px 14px; border-radius: 20px; margin-bottom: 14px; text-transform: uppercase; letter-spacing: 0.5px;">
@@ -133,44 +136,75 @@
         Contamos con una nutricionista para ayudarte a alcanzar tus objetivos.
       </p>
 
-      <div style="background: #ffffff; border: 1px solid #ddeecb; border-radius: 16px; padding: 28px; display: flex; gap: 24px; align-items: flex-start; text-align: left; box-shadow: 0 2px 12px rgba(0,0,0,0.05);">
+      <div style="background: #ffffff; border: 1px solid #ddeecb; border-radius: 16px; padding: 28px; text-align: left; box-shadow: 0 2px 12px rgba(0,0,0,0.05);">
 
-        <div style="width: 90px; height: 90px; min-width: 90px; border-radius: 50%; background: #c0dd97; display: flex; align-items: center; justify-content: center; font-size: 30px; font-weight: 700; color: #3B6D11;">
-          LC
+        <!-- Presentación -->
+        <div style="display: flex; gap: 20px; align-items: center; margin-bottom: 24px;">
+          <img src="img/silvana.jpg" alt="Lic. Silvana Mazzocchi" style="width: 80px; height: 120px; min-width: 80px; border-radius: 50%; object-fit: cover;">
+          <div>
+            <p style="font-size: 19px; font-weight: 700; color: #1a2e0f; margin: 0 0 4px;">
+              Lic. Mazzocchi Silvana
+            </p>
+            <p style="font-size: 13px; color: #888; margin: 0;">
+              Licenciada en Nutrición y evaluadora antropométrica ISAK. Trabajo desde la alimentación, pero siempre con los ojos puestos en el bienestar completo: el cuerpo, los hábitos y la vida que cada persona quiere construir.
+            </p>
+          </div>
         </div>
 
-        <div style="flex: 1;">
-          <p style="font-size: 19px; font-weight: 700; color: #1a2e0f; margin: 0 0 4px;">
-            Lic. Laura Ejemplo
-          </p>
-          <p style="font-size: 13px; color: #888; margin: 0 0 14px;">
-            Licenciada en Nutrición · Mat. N° 0000
-          </p>
-          <p style="font-size: 14px; color: #555; line-height: 1.7; margin: 0 0 18px;">
-            Atención personalizada para que logres un estilo de vida saludable y sostenible.
-            Planes alimentarios adaptados a vos, tus objetivos y tu rutina diaria.
-          </p>
+        <!-- ACORDEÓN -->
+        <div class="acordeon">
 
-          <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px;">
-            <span style="background: #f0f7e8; border: 1px solid #c5dfa0; color: #3B6D11; font-size: 12px; padding: 4px 12px; border-radius: 20px;">Plan alimentario</span>
-            <span style="background: #f0f7e8; border: 1px solid #c5dfa0; color: #3B6D11; font-size: 12px; padding: 4px 12px; border-radius: 20px;">Control de peso</span>
-            <span style="background: #f0f7e8; border: 1px solid #c5dfa0; color: #3B6D11; font-size: 12px; padding: 4px 12px; border-radius: 20px;">Seguimiento personalizado</span>
+          <div class="acordeon-item">
+            <button class="acordeon-titulo" onclick="toggleAcordeon(this)">
+              ¿Quién soy? <span class="acordeon-flecha">+</span>
+            </button>
+            <div class="acordeon-cuerpo">
+              <p>Soy Silvana Mazzocchi, Licenciada en Nutrición (MP 3471), con formación en antropometría ISAK Nivel 1. Hace 14 años soy dueña de Sabores de la Tierra, un almacén de productos naturales y saludables en Córdoba. Me apasionan las relaciones humanas y la comunicación, y disfruto mucho compartir contenido en redes: creo que divulgar sobre alimentación de forma cercana y honesta también es parte de mi trabajo. Lo que más me moviliza es acompañar, motivar y guiar a mis pacientes y clientes hacia una vida más saludable, desde mi experiencia y con mucho compromiso.</p>
+            </div>
           </div>
 
-          <a href="https://wa.me/5493510000000?text=Hola!%20Quiero%20consultar%20con%20la%20nutricionista"
-             target="_blank"
-             style="display: inline-flex; align-items: center; gap: 10px; background: #25D366; color: #ffffff; text-decoration: none; font-size: 15px; font-weight: 600; padding: 12px 22px; border-radius: 10px;">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="white">
-              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-            </svg>
-            Consultar por WhatsApp
-          </a>
-        </div>
-      </div>
+          <div class="acordeon-item">
+            <button class="acordeon-titulo" onclick="toggleAcordeon(this)">
+              ¿A qué me dedico? <span class="acordeon-flecha">+</span>
+            </button>
+            <div class="acordeon-cuerpo">
+              <p>Me dedico a acompañar personas en su camino hacia una alimentación más consciente y una vida más saludable. Mi enfoque es integral: no me quedo solo en lo que come el paciente, sino que tengo en cuenta su contexto, su actividad física, su bienestar emocional y todo lo que forma parte de su vida cotidiana. No aplico fórmulas ni soy rígida: adapto cada proceso a la persona que tengo enfrente, con escucha real, experiencia y mucho compromiso.</p>
+            </div>
+          </div>
 
+          <div class="acordeon-item">
+            <button class="acordeon-titulo" onclick="toggleAcordeon(this)">
+              ¿Con quién trabajo? <span class="acordeon-flecha">+</span>
+            </button>
+            <div class="acordeon-cuerpo">
+              <p>Trabajo con personas que sienten que es momento de hacer un cambio real en su alimentación. Tengo especial experiencia con mujeres en etapa de menopausia y perimenopausia, mamás y familias, deportistas y personas que disfrutan moverse y quieren acompañar ese esfuerzo con una buena nutrición. Me gusta conocer a cada persona en profundidad, porque cada historia es única y el acompañamiento también lo es.</p>
+            </div>
+          </div>
+
+          <div class="acordeon-item">
+            <button class="acordeon-titulo" onclick="toggleAcordeon(this)">
+              ¿Cómo es la consulta? <span class="acordeon-flecha">+</span>
+            </button>
+            <div class="acordeon-cuerpo">
+              <p>Trabajo a través de un programa personalizado que acompaña a cada paciente en todo el proceso. Comenzamos con una valoración completa para conocer la situación y hacer un diagnóstico real. Luego se entrega y explica el plan alimentario, adaptado a la vida cotidiana de cada persona. En los encuentros siguientes revisamos la evolución, ajustamos lo necesario y seguimos sumando herramientas de educación alimentaria. La modalidad puede ser presencial o virtual, ajustándose a la necesidad de cada paciente.</p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Botón WhatsApp -->
+        <a href="https://wa.me/5493516718415?text=Hola!%20Quiero%20consultar%20con%20la%20nutricionista"
+           target="_blank"
+           style="display: inline-flex; align-items: center; gap: 10px; background: #25D366; color: #ffffff; text-decoration: none; font-size: 15px; font-weight: 600; padding: 12px 22px; border-radius: 10px; margin-top: 22px;">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="white">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884"/>
+          </svg>
+          Consultar por WhatsApp
+        </a>
+
+      </div>
     </div>
   </section>
-
 </main>
 
 <footer id="footer-principal"></footer>

@@ -1175,7 +1175,7 @@ if (footerPrincipal) {
     <div class="footer-datos">
       <p>📍
         <a href="https://maps.app.goo.gl/as6M8Drw7A7B4qcY6" target="_blank" class="footer-link">
-          Independencia 1054 - Córdoba
+          Independencia 1054-Nueva Córdoba-Córdoba Capital
         </a>
       </p>
       <p>📲 WhatsApp:
@@ -1218,3 +1218,11 @@ barra.innerHTML = `<div class="barra-anuncios-track">${contenido}</div>`;
 
 // la inserta como primer elemento del body (arriba de todo)
 document.body.insertBefore(barra, document.body.firstChild);
+
+/* =====================================
+   ACORDEÓN (nutricionista)
+   ===================================== */
+function toggleAcordeon(boton) {
+  const item = boton.parentElement;
+  item.classList.toggle("activo");
+} 

@@ -158,7 +158,7 @@ nav a:hover {
 /* ===================================== */
 .categorias {
   background-color: white;
-  padding: 0px 20px;
+  padding: 20px 20px;
   text-align: center;
 }
 
@@ -1460,4 +1460,54 @@ main {
 
 .barra-anuncios:hover .barra-anuncios-track {
   animation-play-state: paused;
+}
+
+/* ===================================== */
+/* ACORDEÓN NUTRICIONISTA                 */
+/* ===================================== */
+.acordeon-item {
+  border-bottom: 1px solid #e3eed5;
+}
+
+.acordeon-titulo {
+  width: 100%;
+  background: none;
+  border: none;
+  text-align: left;
+  padding: 14px 4px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #1a2e0f;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.acordeon-flecha {
+  font-size: 20px;
+  color: #3B6D11;
+  transition: transform 0.3s ease;
+}
+
+.acordeon-cuerpo {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.acordeon-cuerpo p {
+  padding: 0 4px 14px;
+  margin: 0;
+  font-size: 14px;
+  color: #555;
+  line-height: 1.7;
+}
+
+.acordeon-item.activo .acordeon-cuerpo {
+  max-height: 300px;
+}
+
+.acordeon-item.activo .acordeon-flecha {
+  transform: rotate(45deg);
 }
