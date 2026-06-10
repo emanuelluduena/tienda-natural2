@@ -47,6 +47,8 @@ const categorias = [
   { nombre: "Mañanas que Cargan", url: "granolas.html", icono: "ti-sun" },
   { nombre: "Fresquísimos", url: "congelados.html", icono: "ti-snowflake" },
   { nombre: "El Cajón Sorpresa", url: "el-cajon-sorpresa.html", icono: "ti-gift" },
+  { nombre: "El Café de Siempre", url: "cafes.html", icono: "ti-coffee" },
+  { nombre: "Endulzantes & Naturales", url: "endulzantes.html", icono: "ti-bottle" },
 ];
 
 /* =====================================
@@ -590,6 +592,71 @@ const productos = [
   contenido: "img/aceite-oliva-extra-virgen.jpg",
   destacado: true
 },
+
+// ===== CAFÉS =====
+  {
+    nombre: "Café Brasil Cabrales x 250 g",
+    precio: 24000,
+    descripcion: "Café de origen Brasil, tostado y molido · 250 g",
+    imagen: "img/cafe-brasil-cabrales.jpg",
+    categoria: "cafes"
+  },
+  {
+    nombre: "Café Perú Cabrales x 250 g",
+    precio: 24000,
+    descripcion: "Café de origen Perú, tostado y molido · 250 g",
+    imagen: "img/cafe-peru-cabrales.jpg",
+    categoria: "cafes"
+  },
+  {
+    nombre: "Café Colombia Cabrales x 250 g",
+    precio: 24000,
+    descripcion: "Café de origen Colombia, tostado y molido · 250 g",
+    imagen: "img/cafe-colombia-cabrales.jpg",
+    categoria: "cafes"
+  },
+  {
+    nombre: "Supercabrales x 250 g",
+    precio: 17500,
+    descripcion: "El clásico Supercabrales · 250 g",
+    imagen: "img/supercabrales.jpg",
+    categoria: "cafes"
+  },
+  {
+    nombre: "Descafeinado Cabrales x 250 g",
+    precio: 22000,
+    descripcion: "Café descafeinado Cabrales · 250 g",
+    imagen: "img/descafeinado-cabrales.jpg",
+    categoria: "cafes"
+  },
+  {
+    nombre: "Café de Mistol x 200 g",
+    precio: 7500,
+    descripcion: "Café artesanal de mistol · 200 g",
+    imagen: "img/cafe-mistol.jpg",
+    categoria: "cafes"
+  },
+  {
+    nombre: "Café de Algarroba x 200 g",
+    precio: 7500,
+    descripcion: "Café artesanal de algarroba · 200 g",
+    imagen: "img/cafe-algarroba.jpg",
+    categoria: "cafes"
+  },
+  {
+    nombre: "Café Italiano Cabrales x 250 g",
+    precio: 24000,
+    descripcion: "Café estilo italiano Cabrales · 250 g",
+    imagen: "img/cafe-italiano-cabrales.jpg",
+    categoria: "cafes"
+  },
+  {
+    nombre: "Café Prestige Cabrales x 250 g",
+    precio: 22000,
+    descripcion: "Café Prestige selección especial Cabrales · 250 g",
+    imagen: "img/cafe-prestige-cabrales.jpg",
+    categoria: "cafes"
+  },
 
 
 
