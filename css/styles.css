@@ -1511,3 +1511,49 @@ main {
 .acordeon-item.activo .acordeon-flecha {
   transform: rotate(45deg);
 }
+/* ===== VARIANTES DE PRODUCTO ===== */
+.variantes-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 8px;
+}
+
+.variante-fila {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255,255,255,0.15);
+  border-radius: 6px;
+  padding: 5px 8px;
+}
+
+.variante-etiqueta {
+  font-size: 0.85rem;
+  color: #fff;
+  font-weight: 600;
+  min-width: 45px;
+}
+
+.variante-precio {
+  font-size: 0.85rem;
+  color: #F5A623;
+  font-weight: 700;
+  flex: 1;
+}
+
+.btn-variante {
+  background: #2BBDA8;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 4px 10px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn-variante:hover {
+  background: #0b755b;
+}

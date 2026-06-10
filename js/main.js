@@ -1,3 +1,11 @@
+// ===== FAVICON =====
+const favicon = document.createElement("link");
+favicon.rel = "icon";
+favicon.type = "image/jpeg";
+favicon.href = "img/logo-redondo.jpg";
+document.head.appendChild(favicon);
+
+
 /* =====================================
    HEADER (se inserta en todas las páginas)
    ===================================== */
@@ -47,8 +55,9 @@ const categorias = [
   { nombre: "Mañanas que Cargan", url: "granolas.html", icono: "ti-sun" },
   { nombre: "Fresquísimos", url: "congelados.html", icono: "ti-snowflake" },
   { nombre: "El Cajón Sorpresa", url: "el-cajon-sorpresa.html", icono: "ti-gift" },
-  { nombre: "El Café de Siempre", url: "cafes.html", icono: "ti-coffee" },
+  { nombre: "Infusiones & Cafés", url: "cafes.html", icono: "ti-coffee" },
   { nombre: "Endulzantes & Naturales", url: "endulzantes.html", icono: "ti-bottle" },
+  { nombre: "El Rincón del Chocolate", url: "chocolates.html", icono: "ti-candy" },
 ];
 
 /* =====================================
@@ -583,15 +592,37 @@ const productos = [
     categoria: "otros",
     destacado: true
   },
+
   {
-  nombre: "Aceite de Oliva Extra Virgen 1 Lt",
-  precio: 15000,
-  descripcion: "Primera Prensada · Natural · Sin Aditivos",
-  imagen: "img/aceite-oliva-extra-virgen.jpg",
-  categoria: "otros",
-  contenido: "img/aceite-oliva-extra-virgen.jpg",
-  destacado: true
-},
+    nombre: "Jugo de Arándanos con chía x 1,5 Lt",
+    precio: 0,
+    descripcion: "Antioxidantes · Vitamina C · Natural · Sin conservantes",
+    imagen: "img/jugo-arandanos-chia.jpg",
+    categoria: "otros"
+  },
+  {
+    nombre: "Jugo de Arándanos con Stevia x 1,5 Lt",
+    precio: 0,
+    descripcion: "Antioxidantes · Vitamina C · Sin azúcar · Con stevia",
+    imagen: "img/jugo-arandanos-stevia.jpg",
+    categoria: "otros"
+  },
+
+  {
+    nombre: "Yogurt Natural sin azúcar x 250 g x 2",
+    precio: 4500,
+    descripcion: "Probióticos · Calcio · Natural · Sin conservantes",
+    imagen: "img/yogurt-natural-sin-azucar.jpg",
+    categoria: "otros"
+  },
+  {
+    nombre: "Yogurt Natural Endulzado x 250 g x 2",
+    precio: 4500,
+    descripcion: "Probióticos · Calcio · Natural · Suavemente endulzado",
+    imagen: "img/yogurt-natural-endulzado.jpg",
+    categoria: "otros"
+  },
+  
 
 // ===== CAFÉS =====
   {
@@ -657,6 +688,41 @@ const productos = [
     imagen: "img/cafe-prestige-cabrales.jpg",
     categoria: "cafes"
   },
+  {
+    nombre: "Yerba Tucangua x 500 g",
+    precio: 2700,
+    descripcion: "Natural · Digestiva · Aromática · Artesanal",
+    imagen: "img/yerba-tucangua.jpg",
+    categoria: "cafes"
+  },
+  {
+    nombre: "Yerba Kalena x 500 g",
+    precio: 7200,
+    descripcion: "Natural · Relajante · Aromática · Artesanal",
+    imagen: "img/yerba-kalena.jpg",
+    categoria: "cafes"
+  },
+  {
+    nombre: "Té Rojo x 250 g",
+    precio: 1200,
+    descripcion: "Digestivo · Antioxidantes · Depurativo · Natural",
+    imagen: "img/te-rojo.jpg",
+    categoria: "cafes"
+  },
+  {
+    nombre: "Té Verde x 250 g",
+    precio: 1200,
+    descripcion: "Antioxidantes · Energía · Metabolismo · Natural",
+    imagen: "img/te-verde.jpg",
+    categoria: "cafes"
+  },
+  {
+    nombre: "Té Negro x 250 g",
+    precio: 1200,
+    descripcion: "Energía · Antioxidantes · Digestivo · Natural",
+    imagen: "img/te-negro.jpg",
+    categoria: "cafes"
+  },
 
 
 
@@ -670,7 +736,158 @@ const productos = [
     imagen: "img/mix-frutos-rojos.jpg",
     categoria: "congelados",
     destacado: true
-  }
+  },
+
+// ===== ENDULZANTES & NATURALES =====
+  {
+    nombre: "Miel",
+    descripcion: "Natural · Sin aditivos · Energía · Antioxidantes",
+    imagen: "img/miel.jpg",
+    categoria: "endulzantes",
+    variantes: [
+      { etiqueta: "250 g", precio: 3500 },
+      { etiqueta: "500 g", precio: 6000 },
+      { etiqueta: "1 kg",  precio: 11000 }   
+    ]
+  },
+  {
+    nombre: "Aceite de Coco Neutro",
+    descripcion: "Sin sabor · Cocción saludable · Grasas buenas · Natural",
+    imagen: "img/aceite-coco-neutro.jpg",
+    categoria: "endulzantes",
+    variantes: [
+      { etiqueta: "200 g", precio: 7000 },
+      { etiqueta: "360 g", precio: 9300 }
+    ]
+  },
+  {
+    nombre: "Aceite de Coco Virgen",
+    descripcion: "Extra virgen · Aroma natural · Grasas saludables · Sin refinar",
+    imagen: "img/aceite-coco-virgen.jpg",
+    categoria: "endulzantes",
+    variantes: [
+      { etiqueta: "200 g", precio: 10000 },
+      { etiqueta: "360 g", precio: 16500 }
+    ]
+  },
+
+  {
+    nombre: "Aceite de Chía x 250 g",
+    precio: 0,
+    descripcion: "Omega 3 · Antioxidantes · Piel · Grasas saludables",
+    imagen: "img/aceite-chia.jpg",
+    categoria: "endulzantes"
+  },
+  {
+    nombre: "Aceite de Lino x 250 g",
+    precio: 0,
+    descripcion: "Omega 3 · Antiinflamatorio · Corazón · Grasas saludables",
+    imagen: "img/aceite-lino.jpg",
+    categoria: "endulzantes"
+  },
+  {
+    nombre: "Aceite de Sésamo x 250 g",
+    precio: 0,
+    descripcion: "Antioxidantes · Calcio · Grasas saludables · Natural",
+    imagen: "img/aceite-sesamo.jpg",
+    categoria: "endulzantes"
+  },
+  {
+    nombre: "Aceite de Palta x 250 g",
+    precio: 0,
+    descripcion: "Vitamina E · Grasas saludables · Corazón · Natural",
+    imagen: "img/aceite-palta.jpg",
+    categoria: "endulzantes"
+  },
+  {
+  nombre: "Aceite de Oliva Extra Virgen 1 Lt",
+  precio: 15000,
+  descripcion: "Primera Prensada · Natural · Sin Aditivos",
+  imagen: "img/aceite-oliva-extra-virgen.jpg",
+  categoria: "endulzantes",
+  destacado: true
+},
+
+  // ===== CHOCOLATES =====
+  {
+    nombre: "Almendras con Chocolate x 100 g",
+    precio: 4500,
+    descripcion: "Almendras · Chocolate · Energía · Antioxidantes",
+    imagen: "img/almendras-chocolate.jpg",
+    categoria: "chocolates"
+  },
+  {
+    nombre: "Arándanos con Chocolate x 100 g",
+    precio: 5500,
+    descripcion: "Arándanos · Chocolate · Antioxidantes · Vitaminas",
+    imagen: "img/arandanos-chocolate.jpg",
+    categoria: "chocolates"
+  },
+  {
+    nombre: "Café con Chocolate x 100 g",
+    precio: 5000,
+    descripcion: "Café · Chocolate · Energía · Antioxidantes",
+    imagen: "img/cafe-chocolate.jpg",
+    categoria: "chocolates"
+  },
+  {
+    nombre: "Cereal con Chocolate x 100 g",
+    precio: 4500,
+    descripcion: "Cereal · Chocolate · Energía · Fibra",
+    imagen: "img/cereal-chocolate.jpg",
+    categoria: "chocolates"
+  },
+  {
+    nombre: "Maní con Chocolate x 100 g",
+    precio: 3000,
+    descripcion: "Maní · Chocolate · Proteínas · Energía",
+    imagen: "img/mani-chocolate.jpg",
+    categoria: "chocolates"
+  },
+  {
+    nombre: "Naranja con Chocolate x 100 g",
+    precio: 5500,
+    descripcion: "Naranja · Chocolate · Vitamina C · Antioxidantes",
+    imagen: "img/naranja-chocolate.jpg",
+    categoria: "chocolates"
+  },
+  {
+    nombre: "Pasas de Uva con Chocolate x 100 g",
+    precio: 3500,
+    descripcion: "Pasas · Chocolate · Hierro · Energía",
+    imagen: "img/pasas-chocolate.jpg",
+    categoria: "chocolates"
+  },
+  {
+    nombre: "Chocolate 70% x 100 g",
+    precio: 6000,
+    descripcion: "Cacao intenso · Antioxidantes · Bajo azúcar · Artesanal",
+    imagen: "img/chocolate-70.jpg",
+    categoria: "chocolates"
+  },
+  {
+    nombre: "Chocolate 100% x 100 g",
+    precio: 7700,
+    descripcion: "Puro cacao · Sin azúcar · Antioxidantes · Intenso",
+    imagen: "img/chocolate-100.jpg",
+    categoria: "chocolates"
+  },
+   {
+    nombre: "Medallones de chocolate semiamargo x 100 g",
+    precio: 2400,
+    descripcion: "Puro cacao · Sin azúcar · Antioxidantes · Intenso",
+    imagen: "img/medallon-de-chocolate.jpg",
+    categoria: "chocolates"
+  },
+  {
+    nombre: "Chips de Chocolate Semiamargo x 250 g",
+    precio: 5000,
+    descripcion: "Repostería · Antioxidantes · Cacao intenso · Sin conservantes",
+    imagen: "img/chips-chocolate-semiamargo.jpg",
+    categoria: "chocolates"
+  },
+
+
 ];
 
 /* =====================================
@@ -905,23 +1122,55 @@ if (typeof categoriaActual !== "undefined") {
     productos
       .filter(p => p.categoria === categoriaActual)
       .forEach(producto => {
-        contenedorCategoria.innerHTML += `
-          <article class="producto card-foto" style="background-image:url('${producto.imagen}');">
-            ${producto.video ? `<button class="btn-video" onclick="abrirVideo('${producto.video}')">▶ Ver video</button>` : ""}
-            <div class="card-contenido">
-              <h3>${producto.nombre}</h3>
-              <p class="precio">$${producto.precio}</p>
-              <p class="card-desc">${producto.descripcion}</p>
-              ${producto.contenido ? `<p class="card-contiene"><strong>Contiene:</strong> ${producto.contenido}</p>` : ""}
-              <button class="btn-producto"
-                data-nombre="${producto.nombre}"
-                data-precio="${producto.precio}"
+
+        // Card con variantes
+        if (producto.variantes) {
+          const variantesHTML = producto.variantes.map(v => `
+            <div class="variante-fila">
+              <span class="variante-etiqueta">${v.etiqueta}</span>
+              <span class="variante-precio">$${v.precio}</span>
+              <button class="btn-variante"
+                data-nombre="${producto.nombre} x ${v.etiqueta}"
+                data-precio="${v.precio}"
                 onclick="agregarAlCarrito(this)">
-                Agregar al carrito
+                Agregar
               </button>
             </div>
-          </article>
-        `;
+          `).join("");
+
+          contenedorCategoria.innerHTML += `
+            <article class="producto card-foto" style="background-image:url('${producto.imagen}');">
+              <div class="card-contenido">
+                <h3>${producto.nombre}</h3>
+                <p class="card-desc">${producto.descripcion}</p>
+                <div class="variantes-lista">
+                  ${variantesHTML}
+                </div>
+              </div>
+            </article>
+          `;
+
+        // Card normal (sin variantes)
+        } else {
+          contenedorCategoria.innerHTML += `
+            <article class="producto card-foto" style="background-image:url('${producto.imagen}');">
+              ${producto.video ? `<button class="btn-video" onclick="abrirVideo('${producto.video}')">▶ Ver video</button>` : ""}
+              <div class="card-contenido">
+                <h3>${producto.nombre}</h3>
+                <p class="precio">$${producto.precio}</p>
+                <p class="card-desc">${producto.descripcion}</p>
+                ${producto.contenido ? `<p class="card-contiene"><strong>Contiene:</strong> ${producto.contenido}</p>` : ""}
+                <button class="btn-producto"
+                  data-nombre="${producto.nombre}"
+                  data-precio="${producto.precio}"
+                  onclick="agregarAlCarrito(this)">
+                  Agregar al carrito
+                </button>
+              </div>
+            </article>
+          `;
+        }
+
       });
   }
 }
