@@ -852,10 +852,10 @@ header {
 /* ============================= */
 .instagram-section {
   text-align: center;
-  padding: 20px 20px;
+  padding: 20px 0;
   background-color: #fff;
-  max-height: 600px;
   overflow: hidden;
+  max-height: 620px;
 }
 
 .instagram-section p {
@@ -868,63 +868,47 @@ header {
   align-items: center;
   justify-content: center;
   gap: 10px;
+  width: 100%;
+  padding: 0;
 }
 
-.carrusel-track {
-  display: flex;
-  gap: 20px;
-  overflow-x: auto;
-  scroll-behavior: smooth;
-  scroll-snap-type: x mandatory;
-  -webkit-overflow-scrolling: touch;
-  padding: 10px 0;
+.carrusel-viewport {
   flex: 1;
-}
-
-.carrusel-track::-webkit-scrollbar {
-  display: none;
-}
-
-.carrusel-item {
-  scroll-snap-align: center;
-}
-
-.carrusel-item {
-  min-width: 320px;
-  max-width: 320px;
-  transform: scale(0.8);
-  transform-origin: top center;
-  scroll-snap-align: center;
+  overflow: hidden;
+  padding: 10px 0;
 }
 
 .carrusel-btn {
-  background-color: var(--verde-principal);
+  background-color: #2BBDA8;
   color: white;
   border: none;
   border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  font-size: 1.2rem;
+  width: 44px;
+  height: 44px;
+  font-size: 1.3rem;
   cursor: pointer;
   flex-shrink: 0;
+  transition: background-color 0.2s, transform 0.2s;
+  z-index: 10;
 }
 
 .carrusel-btn:hover {
-  background-color: #556b2f;
+  background-color: #0b755b;
+  transform: scale(1.1);
 }
 
 .btn-instagram {
   display: inline-block;
   margin-top: 20px;
   padding: 10px 25px;
-  background-color: var(--verde-principal);
+  background-color: #2BBDA8;
   color: white;
   border-radius: 5px;
   font-weight: 600;
 }
 
 .btn-instagram:hover {
-  background-color: #556b2f;
+  background-color: #0b755b;
   text-decoration: none;
 }
 
@@ -1603,4 +1587,14 @@ main {
   background: linear-gradient(135deg, #003087 0%, #4FA8D8 100%) !important;
   color: #ffffff !important;
   border-color: #003087 !important;
+}
+
+/* Productos destacados más chicos en PC */
+@media (min-width: 601px) {
+  .producto.card-foto.carrusel-card {
+    height: 280px !important;
+  }
+}
+.logo-texto {
+  filter: brightness(0) saturate(100%) invert(27%) sepia(50%) saturate(800%) hue-rotate(345deg) brightness(75%) contrast(90%);
 }

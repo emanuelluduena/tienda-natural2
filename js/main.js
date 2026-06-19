@@ -959,7 +959,7 @@ function crearCarrusel(idContenedor, listaProductos) {
       transition: width 0.5s ease, opacity 0.5s ease, transform 0.5s ease;
     `;
     card.innerHTML = `
-      ${producto.video ? `<button class="btn-video" onclick="abrirVideo('${producto.video}')">▶ Ver video</button>` : ""}
+      
       <div class="card-contenido">
         <h3>${producto.nombre}</h3>
         <p class="precio">$${producto.precio}</p>
@@ -1154,7 +1154,7 @@ if (typeof categoriaActual !== "undefined") {
         } else {
           contenedorCategoria.innerHTML += `
             <article class="producto card-foto" style="background-image:url('${producto.imagen}');">
-              ${producto.video ? `<button class="btn-video" onclick="abrirVideo('${producto.video}')">▶ Ver video</button>` : ""}
+              
               <div class="card-contenido">
                 <h3>${producto.nombre}</h3>
                 <p class="precio">$${producto.precio}</p>
@@ -1283,23 +1283,135 @@ document.addEventListener("click", function(e) {
 /* =====================================
    CARRUSEL INSTAGRAM
    ===================================== */
-let posicionCarrusel = 0;
 
-function moverCarrusel(direccion) {
-  const track = document.getElementById("carrusel-track");
-  if (!track) return;
+   function crearCarruselInstagram() {
+  const wrapper = document.getElementById("carrusel-viewport");
+  if (!wrapper) return;
 
-  const items = track.querySelectorAll(".carrusel-item");
-  const totalItems = items.length;
+  const itemsOriginales = Array.from(wrapper.querySelectorAll(".carrusel-item"));
+  if (itemsOriginales.length === 0) return;
 
-  posicionCarrusel += direccion;
+  // Quita el track original y reconstruye todo desde JS
+  const trackViejo = document.getElementById("carrusel-track");
+  if (trackViejo) trackViejo.remove();
 
-  if (posicionCarrusel < 0) posicionCarrusel = totalItems - 1;
-  if (posicionCarrusel >= totalItems) posicionCarrusel = 0;
+  const lista = itemsOriginales;
+  const total = lista.length;
 
-  const ancho = items[0].offsetWidth + 20;
-  track.style.transform = `translateX(-${posicionCarrusel * ancho}px)`;
+  const anchoWrapper = wrapper.parentElement.offsetWidth || window.innerWidth;
+  const ANCHO_CENTRO  = Math.round(anchoWrapper * 0.38);
+  const ANCHO_LATERAL = Math.round(anchoWrapper * 0.28);
+  const PASO = ANCHO_LATERAL;
+  const GAP = 0;
+
+  // Triple para loop infinito
+  const listaTriple = [...lista, ...lista, ...lista];
+  const offsetInicial = total;
+
+  wrapper.style.cssText = `
+    position: relative;
+    overflow: hidden;
+    flex: 1;
+    padding: 10px 0;
+  `;
+
+  const track = document.createElement("div");
+  track.style.cssText = `
+    display: flex;
+    gap: ${GAP}px;
+    align-items: center;
+    will-change: transform;
+  `;
+
+  listaTriple.forEach((item, i) => {
+    const card = document.createElement("div");
+    card.className = "insta-card";
+    card.style.cssText = `
+      flex-shrink: 0;
+      width: ${ANCHO_LATERAL}px;
+      height: 500px;
+      opacity: 0.5;
+      transform: scale(0.88);
+      transition: width 0.5s ease, opacity 0.5s ease, transform 0.5s ease;
+      overflow: hidden;
+      border-radius: 12px;
+    `;
+    card.appendChild(item.cloneNode(true));
+    track.appendChild(card);
+  });
+
+  wrapper.appendChild(track);
+
+  let pos = offsetInicial + 1;
+  let bloqueado = false;
+
+  function calcularOffset(p) {
+    return p * PASO - ANCHO_LATERAL - GAP + (ANCHO_LATERAL - ANCHO_CENTRO) / 2;
+  }
+
+  function aplicarEstilos(animado) {
+    track.style.transition = animado ? "transform 0.5s ease" : "none";
+    track.style.transform = `translateX(-${calcularOffset(pos)}px)`;
+
+    const cards = track.querySelectorAll(".insta-card");
+    cards.forEach((card, i) => {
+      if (i === pos) {
+        card.style.width = ANCHO_CENTRO + "px";
+        card.style.opacity = "1";
+        card.style.transform = "scale(1)";
+      } else if (i === pos - 1 || i === pos + 1) {
+        card.style.width = ANCHO_LATERAL + "px";
+        card.style.opacity = "0.5";
+        card.style.transform = "scale(0.88)";
+      } else {
+        card.style.width = ANCHO_LATERAL + "px";
+        card.style.opacity = "0";
+        card.style.transform = "scale(0.85)";
+      }
+    });
+
+    // Reinicializa los embeds de Instagram visibles
+    if (window.instgrm) window.instgrm.Embeds.process();
+  }
+
+  function mover(dir) {
+    if (bloqueado) return;
+    bloqueado = true;
+    pos += dir;
+    aplicarEstilos(true);
+
+    setTimeout(() => {
+      if (pos >= total * 2) { pos -= total; aplicarEstilos(false); }
+      if (pos < total)      { pos += total; aplicarEstilos(false); }
+      bloqueado = false;
+    }, 510);
+  }
+
+  window.moverCarrusel = mover;
+
+  // Swipe con el dedo
+  let touchStartX = 0;
+  wrapper.addEventListener("touchstart", e => {
+    touchStartX = e.changedTouches[0].screenX;
+  }, { passive: true });
+  wrapper.addEventListener("touchend", e => {
+    const diff = e.changedTouches[0].screenX - touchStartX;
+    if (diff < -40) mover(1);
+    else if (diff > 40) mover(-1);
+  }, { passive: true });
+
+  aplicarEstilos(false);
+
+  // Autoplay cada 4 segundos
+  let autoPlay = setInterval(() => mover(1), 4000);
+  wrapper.addEventListener("touchstart", () => {
+    clearInterval(autoPlay);
+    autoPlay = setInterval(() => mover(1), 4000);
+  }, { passive: true });
 }
+
+// Espera que los embeds de Instagram carguen antes de iniciar
+window.addEventListener("load", crearCarruselInstagram);
 
 function cargarCarrito() {
   const carritoGuardado = JSON.parse(localStorage.getItem("carrito"));
@@ -1374,7 +1486,7 @@ function buscarProductos(texto) {
     encontrados.forEach(producto => {
       gridResultados.innerHTML += `
         <article class="producto card-foto" style="background-image:url('${producto.imagen}');">
-          ${producto.video ? `<button class="btn-video" onclick="abrirVideo('${producto.video}')">▶ Ver video</button>` : ""}
+          
           <div class="card-contenido">
             <h3>${producto.nombre}</h3>
             <p class="precio">$${producto.precio}</p>
@@ -1650,22 +1762,7 @@ if (headerEl) {
     a.style.color = "#003087";
   });
 
-  // Sol dorado detrás del logo
-  const sol = document.createElement("div");
-  sol.style.cssText = `
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 200px;
-    height: 200px;
-    background: radial-gradient(circle, #F5A623 0%, #F9D000 40%, transparent 70%);
-    border-radius: 50%;
-    z-index: 0;
-    pointer-events: none;
-    animation: pulsarSol 2s ease-in-out infinite;
-  `;
-  headerEl.appendChild(sol);
+  
 }
 
 // ----- Confetti de banderitas cayendo -----
